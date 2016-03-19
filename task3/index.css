@@ -1,0 +1,29 @@
+body,ul,li{margin:0px; padding:0px;}
+body{padding:20px; background-color:#EEE;}
+ul{list-style-type:none;}
+
+.group-name,.group-introduction,.group-headportraits {border:1px solid #999;}
+
+.group-name{
+	float:left;
+	padding:20px;
+	width:160px; height:120px;
+	background-color:#FFF;
+}
+.group-name img{
+	width:50%;
+}
+
+.group-introduction{
+	margin-left:222px;
+	margin-right:188px;
+	background-color:#FFF;
+}
+.group-headportraits {
+	float:right;
+	background-color:#FFF;
+}
+.group-headportraits li{
+	padding:20px;
+
+}
