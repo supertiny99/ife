@@ -1,8 +1,13 @@
 body,ul,li{margin:0px; padding:0px;}
-body{padding:20px; background-color:#EEE;}
+body{padding:20px;}
 ul{list-style-type:none;}
 
-.group-name,.group-introduction,.group-headportraits {border:1px solid #999;}
+section{
+	padding:20px;
+	background-color:#EEE;
+}
+.group-name,.group-introduction,.group-headportraits, section{border:1px solid #999;}
+
 
 .group-name{
 	float:left;
@@ -15,8 +20,8 @@ ul{list-style-type:none;}
 }
 
 .group-introduction{
-	margin-left:222px;
-	margin-right:188px;
+	margin:0px 188px 0px 222px;
+	padding:20px;
 	background-color:#FFF;
 }
 .group-headportraits {
