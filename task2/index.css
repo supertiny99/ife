@@ -1,4 +1,4 @@
-body,ul,h1{margin:0px;}
+body,ul,h1,p {margin:0px;}
 li{padding:0px;}
 
 
@@ -46,6 +46,10 @@ li{padding:0px;}
 .article ul{
 	list-style-type:none;
 }
+.article p {
+	text-indent:2em;
+}
+
 .article > h3 {color:#888;}
 .gray{color:#888;}
 
