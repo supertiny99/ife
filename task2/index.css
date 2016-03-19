@@ -49,9 +49,13 @@ li{padding:0px;}
 .article > h3 {color:#888;}
 .gray{color:#888;}
 
-.pics > figure{
-
+/*.pics > figure{
 	border:1px solid #888;
+}*/
+.pics ul {list-style-type:none;}
+.pics ul li {border:1px solid #888; width:200px;}
+.pics img{
+	width:100%;
 }
 .article table{
 	width:100%;
