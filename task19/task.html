@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task18</title>
+	<script src="task.js"></script>
+	<style>
+		.contain{margin-top:10px;overflow:hidden;}
+		.item{
+			float:left; 
+			margin-right:5px;
+			padding:0px 5px;
+			background-color:#F00;
+			font-size:15px;
+			color:#FFF;
+			line-height:40px; 
+			text-align:center; }
+	</style>
+</head>
+<body>
+	<input type="text" />
+	<button onclick="unshift();">左侧入</button>
+	<button onclick="push();">右侧入</button>
+	<button onclick="shift();">左侧出</button>
+	<button onclick="pop();">右侧出</button>
+	<!-- <button onclick="sort();">排序</button> -->
+	<div id="stack" class="contain">
+	</div>
+</body>
+</html>
