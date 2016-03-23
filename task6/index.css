@@ -1,0 +1,107 @@
+
+body,ul,li,p,h1,h2,h3,h4,article{margin:0; padding:0;}
+body{width:100%;}
+ul {list-style-type:none;}
+
+body{
+	margin:0 auto;
+	width:980px; height:1386px;
+	font-family:"微软雅黑";
+}
+.fl{float:left;}
+.fr{float:right;}
+.ff-black{font-family:"黑体";}
+.ff-song{font-family:"宋体";}
+
+
+header, section, footer{
+	margin-left:auto;
+	margin-right:auto;
+	width:892px;
+}
+
+/*header*/
+header {
+	overflow:hidden;
+	border-bottom:2px solid #938E8C;
+	font-size:12px;
+}
+.h-sp1{
+	float:left;
+	width: 110px; height: 61px;
+	background-color:#D45D5C;
+	color:#FFF;
+	text-align:center;
+}
+.h-sp2{
+	float:right;
+}
+
+/*end hedaer*/
+
+/*section1*/
+.section1 {
+	margin-top:20px;
+}
+.s1-header{overflow:hidden;}
+.s1-lt{
+	position:relative;
+	float:left;
+	width:641px;
+}
+.s1-l,.s1-r{
+	position:absolute;
+	width:191px; height:301px;
+	opacity:.2;
+}
+.s1-l{background-color:#0F0;}
+.s1-r{right:0; background-color:#F00;}
+.s1-lt > article {
+	float:left;
+	margin-right:20px;
+}
+.s1-lt article h2{
+	margin:20px 0;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.s1-what,.s1-when{width:34%;}
+.s1-how{width:20%;}
+.s1-lt article p{font-size:12px; line-height:16px;}
+.s1-what h2{color:#418c59;}
+.s1-when h2{color:#d2994f;}
+.s1-how h2{color:#CC7680;}
+.s1-what p{color:#767777; font-family:"宋体";}
+.s1-when p{color:#231815; opacity:.7;}
+.s1-how p{}
+.s1-lt ul{margin:20px 0; font-size:12px;}
+.s1-lt ul li span{color:#cd4a48; font-style:italic; line-height:16px; opacity:.7; }
+div.s1-rt{
+	float:right;
+	width:203px;
+	border-top:2px solid #CC8091;
+}
+div.s1-rt > p{
+
+}
+
+
+
+
+/*end section1*/
+
+/*section2*/
+.section2{overflow:hidden; margin-top:20px;}
+.s2-lt{float:left; width:415px;}
+.s2-title{margin-bottom:20px; width:415px; border-bottom:2px solid #11456b;}
+.s2-title h2,.s2-title h3{font-family:"黑体"; color:#11456b; font-weight:bold;}
+.s2-title h2{font-size:42px;}
+.s2-title h2 span{color:#F5E327; ; font-size:72px; font-style:italic;}
+.s2-title h3{font-size:33px;}
+.s2-lt p {color:#767777; font-family:"宋体";font-size:12px;}
+.section2 p img{float:right; margin:10px;}
+.section2 p:nth-child(3),.section2 p:nth-child(4){text-indent:2em;}
+.section2 p:nth-child(2):first-letter{float:left;color:#F5e327; font-size:70px;}
+.s2-rt{float:right;}
+.s2-rt img{width:458px; height:275px;}
