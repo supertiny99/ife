@@ -98,4 +98,8 @@ function init() {
 }
 window.onload = function(){
 	init();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

@@ -1,5 +1,6 @@
 
 function unshift(){
+<<<<<<< HEAD
 	if(state == STOP){
 		var div = addDiv();
 		if(div){
@@ -7,10 +8,16 @@ function unshift(){
 		}
 	}else{
 		alert("正在排序！");
+=======
+	var div = addDiv();
+	if(div){
+		stack.insertBefore(div, stack.firstElementChild);
+>>>>>>> origin/master
 	}
 }
 
 function push(){
+<<<<<<< HEAD
 	if(state == STOP){
 		var div = addDiv();
 		if(div){
@@ -18,10 +25,16 @@ function push(){
 		}
 	}else{
 		alert("正在排序！");
+=======
+	var div = addDiv();
+	if(div){
+		stack.appendChild(div);
+>>>>>>> origin/master
 	}
 }
 
 function shift(){
+<<<<<<< HEAD
 	if(state == STOP){
 		if(stack.firstElementChild){
 			alert("删除的元素的值为："+parseInt(stack.firstElementChild.style.height));
@@ -31,10 +44,18 @@ function shift(){
 		}
 	}else{
 		alert("正在排序！");
+=======
+	if(stack.firstElementChild){
+		alert("删除的元素的值为："+parseInt(stack.firstElementChild.style.height));
+		stack.removeChild(stack.firstElementChild);
+	}else{
+		alert("没有东西给你删了~");
+>>>>>>> origin/master
 	}
 }
 
 function pop(){
+<<<<<<< HEAD
 	if(state == STOP){
 		if(stack.lastElementChild){
 			alert("删除的元素的值为："+parseInt(stack.lastElementChild.style.height));
@@ -44,6 +65,13 @@ function pop(){
 		}
 	}else{
 		alert("正在排序！");
+=======
+	if(stack.lastElementChild){
+		alert("删除的元素的值为："+parseInt(stack.lastElementChild.style.height));
+		stack.removeChild(stack.lastElementChild);
+	}else{
+		alert("没有东西给你删了~");
+>>>>>>> origin/master
 	}
 }
 
@@ -70,6 +98,7 @@ function addDiv(){
 	}
 }
 function remove(){
+<<<<<<< HEAD
 	//alert("移除的数值为"+parseInt(this.style.height));
 	if(state == STOP){
 		this.parentNode.removeChild(this);
@@ -137,3 +166,8 @@ function bubleOneTime(){
 		}
 	}	
 }
+=======
+	alert("移除的数值为"+parseInt(this.style.height));
+	this.parentNode.removeChild(this);
+}
+>>>>>>> origin/master
