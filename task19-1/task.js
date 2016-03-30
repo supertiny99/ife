@@ -9,9 +9,14 @@ var gridView = {
 
 	rounds: 0,
 	curRound: 0,
+	oneRoundStep: 0,
 	index: 0,
-	interval: 20,
+	interval: 50,
 	timer: null,
+
+	state: 0,
+	SORTTING: 1,
+	FREE: 0,
 
 	inint: function(){
 		this.MAX = 60;
@@ -34,19 +39,20 @@ var gridView = {
 			this.bubble.bind(this), false);
 	},
 	canAdd: function(){
-		if( this.divsLength < this.MAX ){
-			if ( this.input.value !== undefined ){
-				var height = this.input.value;
-				if ( height.search( /^[1-9][0-9]$|^100$/ ) != -1 ){
-					return true;
-				}
+		if( this.state == this.FREE && this.divsLength < this.MAX
+			&& this.input.value !== undefined){
+			var height = this.input.value;
+			if ( height.search( /^[1-9][0-9]$|^100$/ ) != -1 ){
+				return true;
 			}
 		}
 		return false;
 	},
 	canDel: function(){
-
-		return this.divsLength > 0 ? true : false ;
+		if ( this.state == this.FREE && this.divsLength > 0 ){
+			return true;
+		}
+		return false;
 	},
 	unshift: function(){
 		if(this.canAdd()){
@@ -87,30 +93,25 @@ var gridView = {
 		}
 	},
 	bubble: function(){
-		//reset
-		this.rounds = 0;
-		this.curRound = 0;
-		this.index = 0;
-		clearTimeout(this.timer);
-		this.timer = null;
-
-		this.divs = this.grid.getElementsByTagName( "div" );
-		this.divsLength = this.grid.getElementsByTagName( "div" ).length;
+		if(document.getElementById("interval").value){
+			this.interval = document.getElementById("interval").value;}
+		this.state = this.SORTTING;
 		this.rounds = this.divsLength - 1 ;
 		timer = setTimeout( this.bubbleOneRound.bind( this ) , 0);
 	},
 	bubbleOneRound: function(){
 		if( this.curRound < this.rounds ){
 			timer = setTimeout( this.bubbleOneTime.bind( this ) , 0);
+		}else{
+			this.state = this.FREE;
 		}
 	},
 	bubbleOneTime: function(){
 		if( this.index < this.rounds - this.curRound ){
-			var heightPrevious = parseInt( this.divs[this.index].style.height) ;
-			var heightNext = parseInt( this.divs[this.index+1].style.height );
+			var heightPrevious = parseFloat( this.divs[this.index].style.height) ;
+			var heightNext = parseFloat( this.divs[this.index+1].style.height );
 			if(heightPrevious>heightNext){
-				this.divs[this.index].style.height = heightNext + "px"
-				this.divs[this.index+1].style.height = heightPrevious + "px";
+				this.swapDivHeight( this.divs[this.index], this.divs[this.index+1]);
 			}
 			this.index ++ ;
 			time = setTimeout ( arguments.callee.bind(this) , this.interval);
@@ -120,7 +121,11 @@ var gridView = {
 			time = setTimeout ( this.bubbleOneRound.bind(this) , 0);
 		}
 	},
-
+	swapDivHeight: function( div1, div2 ){
+		var temp = parseFloat( div1.style.height ) + "px";
+		div1.style.height = parseFloat( div2.style.height ) + "px";
+		div2.style.height = temp ;
+	},
 
 
 };
