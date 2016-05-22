@@ -59,7 +59,7 @@ li{padding:0px;}
 .pics ul {list-style-type:none;}
 .pics ul li {border:1px solid #888; width:200px;}
 .pics img{
-	width:100%;
+	max-width:100%;
 }
 .article table{
 	width:100%;
